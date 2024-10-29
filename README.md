@@ -116,6 +116,7 @@ viii.	I navigated back to the Webserver security group to verify that an additio
 ![image](https://github.com/user-attachments/assets/ef7d1f94-917e-41d8-b1d3-376bc04c7298)
 
 Conclusion
+
 •	This demonstration shows how changes can be deployed in a repeatable, documented process.
 •	The AWS CloudFormation templates can be stored in a source code repository (such as AWS CodeCommit).
 •	Versions and history of the templates and the infrastructure that was deployed can be maintained.
@@ -123,7 +124,9 @@ Conclusion
 
 
 Task 4: Exploring templates with AWS CloudFormation Designer
-i.	I navigated to the designer section of CloudFormation and uploaded the second lab-application file to show the interrelationship between the templates resources.
+
+i.	I navigated to the designer section of CloudFormation
+ii. I uploaded the second lab-application file to show the interrelationship between the templates resources.
 
 ![image](https://github.com/user-attachments/assets/dd60f1c1-4318-4795-a3cb-5d4575990ba9)
 
