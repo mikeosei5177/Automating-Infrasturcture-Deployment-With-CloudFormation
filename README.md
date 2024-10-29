@@ -83,7 +83,9 @@ Value: inventory
 
 Task 3: Updating the lab-application stack to modify a setting in the security group
 i.	I navigated to EC2 services and selected security groups to check the current settings of the WebServerSecurityGroup.
+
 ii.	I selected the inbound tap and this had only one rule
+
 -	The rule permitted HTTP traffic 
 
 ![image](https://github.com/user-attachments/assets/1ce2a04d-f41d-4e3b-a0ea-5fa273540811)
@@ -118,7 +120,9 @@ viii.	I navigated back to the Webserver security group to verify that an additio
 Conclusion
 
 •	This demonstration shows how changes can be deployed in a repeatable, documented process.
+
 •	The AWS CloudFormation templates can be stored in a source code repository (such as AWS CodeCommit).
+
 •	Versions and history of the templates and the infrastructure that was deployed can be maintained.
   
 
@@ -126,6 +130,7 @@ Conclusion
 Task 4: Exploring templates with AWS CloudFormation Designer
 
 i.	I navigated to the designer section of CloudFormation
+
 ii. I uploaded the second lab-application file to show the interrelationship between the templates resources.
 
 ![image](https://github.com/user-attachments/assets/dd60f1c1-4318-4795-a3cb-5d4575990ba9)
