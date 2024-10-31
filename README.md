@@ -1,6 +1,7 @@
-# Automating-Infrasturcture-Deployment-With-CloudFormation
+# Automating Infrasturcture Deployment With CloudFormation
 
 This project demonstrates my ability to deploy multiple layers of infrastructure with AWS CloudFormation, update a CloudFormation stack and delete a stack (while retaining some resources).
+
 I leveraged AWS CloudFormation to:
 
 i.	deploy a virtual private cloud (VPC) networking layer
@@ -62,7 +63,7 @@ Task 2: Deploying an application layer
 ![image](https://github.com/user-attachments/assets/8f0016a4-34df-434f-8dd6-838aeb126182)
 
                  
-3.	Created a stack
+2.	Created a stack
 
 Stack name: lab-application
 
@@ -82,7 +83,7 @@ Value: inventory
 ![image](https://github.com/user-attachments/assets/31a36d73-0454-4935-9a3d-2b08a7d7a269)
 
 
-4.	Reviewed and Created the new stack
+4.	Reviewed and created the new stack
 
 ![image](https://github.com/user-attachments/assets/9bdfc4fa-8c65-48fb-be7e-757499f69fec)
 
@@ -96,13 +97,19 @@ Value: inventory
 
 ![image](https://github.com/user-attachments/assets/d7d3133d-7403-4e66-a39c-4563127e13fa)
 
+7.	Navigate to EC2 console and select instances.
+   
+This shows the webserver instance that was created with CloudFormation
+
+![image](https://github.com/user-attachments/assets/dc56a6f8-65e8-4a45-8acb-c7c4bd0d7cc3)
+
 
 
 Task 3: Updating the lab-application stack to modify a setting in the security group
 
 i.	I navigated to EC2 services and selected security groups to check the current settings of the WebServerSecurityGroup.
 
-ii.	I selected the inbound tap and this had only one rule
+ii. I selected the inbound tap and this had only one rule
 
 -	The rule permitted HTTP traffic 
 
@@ -153,6 +160,50 @@ i.	I navigated to the designer section of CloudFormation
 ii. I uploaded the second lab-application file to show the interrelationship between the templates resources.
 
 ![image](https://github.com/user-attachments/assets/dd60f1c1-4318-4795-a3cb-5d4575990ba9)
+
+
+Task 5 : Deleting the stack
+
+•	CloudFormation can delete resources built for a stack, when the resources are no longer required
+
+•	Deletion policies can be set against resources which backs up the resources when they are deleted.
+
+•	Databases and disk volumes are retained after a stack is deleted when the deletion policy is set.
+
+i.	The lab-application stack was configured to take a snapshot of the Amazon EBS disk volume before it is deleted. 
+
+ii. The code in the template justifies this configuration. See screen print
+
+![image](https://github.com/user-attachments/assets/b0437713-6071-4991-9118-7139de07637a)
+
+
+iii. Navigated back to CloudFormation Console
+
+-	Selected the lab-application stack
+  
+-	Chose and confirmed delete
+
+![image](https://github.com/user-attachments/assets/c69264b7-fff4-4233-8f36-8e8f34af99d1)
+
+
+![image](https://github.com/user-attachments/assets/57b31425-9aaa-420e-913a-8a5e80979fba)
+
+
+Task 6: Verification of the snapshot of the EBS volume created before it was deleted.
+
+i.	Navigate back to the EC2 console
+
+ii. Select snapshot under Elastic Block Store
+
+iii. Under the snapshot status you will see the status ( either started/completed)
+
+
+![image](https://github.com/user-attachments/assets/fc9159bf-c9b0-4109-9b67-850b9743ba8c)
+
+End.
+
+
+
 
 
 
